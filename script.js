@@ -43,3 +43,6 @@ console.log(otherFunction());
 
 // Arrow Functions : Default Parameters
 
+const increment = (number = number++, value = 1) => number + value;
+
+// 
