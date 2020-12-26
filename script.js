@@ -59,13 +59,31 @@ myArgs("Hello ", "World", "!", 1, 2, 3, 4, true)
 var arr = [6, 89, 3, 45];
 var maximus = Math.max.apply(null, arr); // returns 89
 
-const arr = [6, 89, 3, 45];
-const maximus = Math.max(...arr); // returns 89
+const arr2 = [6, 89, 3, 45];
+const maximus2 = Math.max(...arr); // returns 89
 
 // ... Makes it so no parameters are expected except the array, it doesn't let you do that mostly
 
-console.log(maximus);
+console.log(arr2);
+console.log(maximus2);
 
-const spreaded = ...arr; // will throw a syntax error
+// const spreaded = ...arr; // will throw a syntax error
 // Must be used in function argument (like Math.max())
 
+// Destructuring Assignment : Extract Values
+
+const user = { name: 'John Doe', age: 34 };
+
+const { name, age } = user;
+
+console.log(name, age);
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+const { test2 } = HIGH_TEMPERATURES;
+
+console.log(test2); // undefined because no reference
