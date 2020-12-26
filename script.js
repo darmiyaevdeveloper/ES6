@@ -87,3 +87,5 @@ const HIGH_TEMPERATURES = {
 const { test2 } = HIGH_TEMPERATURES;
 
 console.log(test2); // undefined because no reference
+
+// Destructuring Assignment : Assign Variables
