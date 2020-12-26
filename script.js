@@ -45,4 +45,27 @@ console.log(otherFunction());
 
 const increment = (number = number++, value = 1) => number + value;
 
-// 
+// Rest Parameters : Access the functions args
+
+function myArgs(...args) {
+  console.log(args);
+  console.log(args.length);
+}
+
+myArgs("Hello ", "World", "!", 1, 2, 3, 4, true)
+
+// JS Spread Operator : Unpack your arrays
+
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr); // returns 89
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); // returns 89
+
+// ... Makes it so no parameters are expected except the array, it doesn't let you do that mostly
+
+console.log(maximus);
+
+const spreaded = ...arr; // will throw a syntax error
+// Must be used in function argument (like Math.max())
+
