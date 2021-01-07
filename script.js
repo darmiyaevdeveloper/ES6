@@ -139,3 +139,13 @@ const [a3, b3, ...arr3] = [1, 2, 3, 4, 5, 7];
 console.log(a3, b3); // 1, 2
 console.log(arr3); // [3, 4, 5, 7]
 
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [,, ...arr] = list // Change this line
+  // Only change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+
+// 
