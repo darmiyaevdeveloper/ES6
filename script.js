@@ -89,3 +89,53 @@ const { test2 } = HIGH_TEMPERATURES;
 console.log(test2); // undefined because no reference
 
 // Destructuring Assignment : Assign Variables
+
+const user2 = { name: 'John Doe', age: 34 };
+
+const { name: userName, age: userAge } = user2;
+// userName = 'John Doe', userAge = 34
+
+console.log(userName, userAge);
+
+// Destructuring Assignment : Assign Variables from objects
+
+const anotheruseremailinfo = {
+  johnDoe: { 
+    age: 34,
+    email: 'johnDoe@freeCodeCamp.com'
+  }
+};
+
+// Without assigning custom variables (vars)
+//const { johnDoe: { age, email }} = user;
+// Assigning custom variables (vars)
+const { johnDoe: { age: userAge2, email: userEmail2 }} = anotheruseremailinfo;
+
+// Difference:
+
+// { name: userName, age: userAge }
+// { info: {name: userName, age: userAge} }
+
+console.log(userAge2, userEmail2);
+
+
+
+
+// Destructuring Assignment : Assign Variables from Arrays
+
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); // 1, 2
+const [a2, b2,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); // 1, 2, 5
+
+const [test3, test4] = [1, 2]
+
+// Swap Preexisting Variables
+[test3, test4] = [test4, test3]
+
+// Each comma is one index of the array so it can skip to other indexs
+// Use Destructuring Assignment : with the Rest Parameter to Reassign Array Elements
+const [a3, b3, ...arr3] = [1, 2, 3, 4, 5, 7];
+console.log(a3, b3); // 1, 2
+console.log(arr3); // [3, 4, 5, 7]
+
