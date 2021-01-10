@@ -148,4 +148,42 @@ function removeFirstTwo(list) {
 }
 const arr = removeFirstTwo(source);
 
-// 
+// Destructuring Assignment : Pass an Object as a Function's Parameters
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+const half = ({max, min}) => (max + min) / 2.0; 
+console.log(half(stats));
+// Only change code above this line
+
+/*
+So although this is confusing, this is my explanation:\
+- So basically, when you use an object as an argument and use destructuring, it will receive the variables
+- If that doesn't make sense, when you do half(stats), since we put max and min as function variables (parameters), the function will receive data from the object (specifcally the max and min from the object) which let's you use them as the parameter variables.
+*/
+
+
+// ES6: Create Strings using Template Literals
+
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+
+// Template literal with multi-line and string interpolation
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting); // prints
+// Hello, my name is Zodiac Hasbro!
+// I am 56 years old.
+
+
