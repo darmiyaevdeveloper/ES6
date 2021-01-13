@@ -187,3 +187,5 @@ console.log(greeting); // prints
 // I am 56 years old.
 
 
+// ES6 : Write Concise Object Literal Declarations Using Object Property Shorthand
+
