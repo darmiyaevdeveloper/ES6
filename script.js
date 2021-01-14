@@ -269,4 +269,49 @@ console.log(mp3.fileInfoType);
 
 
 
-// 
+
+// ES6 : Add a module script
+/* HTML
+<script type="module" src="filename.js"></script>
+*/
+
+// ES6 : Export Code
+
+
+// Can use in multiple files
+// Only if export keyword
+// is used
+// for the code/function
+// etc
+/*
+export const add = (x, y) => {
+  return x + y;
+}
+*/
+//export declarations may only appear at top level of a module
+
+
+// ES6 : Reuse JavaScript Code Using import
+
+
+
+
+
+/*
+
+import { add } from './math_functions.js';
+// or
+import { add, subtract } from './math_functions.js';
+
+*/
+// import declarations may only appear at top level of a module
+
+
+// ES6 : Use * to Import Everything from a File
+/*
+
+import * as myMathModule from "./math_functions.js";
+*/
+
+// ES6 : Create an Export Fallback with export default
+
