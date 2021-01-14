@@ -128,7 +128,7 @@ console.log(a, b); // 1, 2
 const [a2, b2,,, c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c); // 1, 2, 5
 
-const [test3, test4] = [1, 2]
+var [test3, test4] = [1, 2]
 
 // Swap Preexisting Variables
 [test3, test4] = [test4, test3]
@@ -142,11 +142,11 @@ console.log(arr3); // [3, 4, 5, 7]
 const source = [1,2,3,4,5,6,7,8,9,10];
 function removeFirstTwo(list) {
   // Only change code below this line
-  const [,, ...arr] = list // Change this line
+  const [,, ...arr4] = list // Change this line
   // Only change code above this line
-  return arr;
+  return arr4;
 }
-const arr = removeFirstTwo(source);
+const arr5 = removeFirstTwo(source);
 
 // Destructuring Assignment : Pass an Object as a Function's Parameters
 
@@ -189,3 +189,84 @@ console.log(greeting); // prints
 
 // ES6 : Write Concise Object Literal Declarations Using Object Property Shorthand
 
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+// Same thing but faster
+
+const getMousePosition2 = (x, y) => ({ x, y });
+// No need to do extra work...
+
+// ES6 : Write Concise Declarative Functions with ES6
+
+
+const person2 = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+const person3 = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+// No need for ```function```
+
+// ES6 : Use class Syntax to Define a Constructor Function
+
+// Only change code below this line
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+    }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+// ES6 : Use getters and setters to Control Access to an Object
+
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer() {
+    return this._author;
+  }
+  // setter
+  set writer(updatedAuthor) {
+    this._author = updatedAuthor;
+  }
+}
+const novel = new Book('anonymous');
+console.log(novel.writer);  // anonymous
+novel.writer = 'newAuthor';
+console.log(novel.writer);  // newAuthor
+
+
+class FileInfo {
+  constructor(fileType) {
+    this.fileType = fileType;
+  }
+  get fileInfoType() {
+    return this.fileType;
+  }
+  set fileInfoType(fileTypeInfo) {
+    this.fileType = fileTypeInfo;
+  }
+}
+
+const mp3 = new FileInfo('mp3');
+console.log(mp3.fileInfoType);
+mp3.fileInfoType = 'wav';
+console.log(mp3.fileInfoType);
+
+
+
+
+// 
