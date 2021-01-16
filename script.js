@@ -314,4 +314,68 @@ import * as myMathModule from "./math_functions.js";
 */
 
 // ES6 : Create an Export Fallback with export default
+/*
+// named function (using existing)
+export default function add(x, y) {
+  return x + y;
+}
+
+// anonymous function (created here)
+export default function(x, y) {
+  return x + y;
+}
+// export default is a default or Fallback
+//incase it doesn't work
+*/
+
+
+// ES6 : Import a Default Export
+
+/* Get default export
+import add from "./math_functions.js";
+
+vs
+import { add } from "./main_functions.js"
+
+Basically, you get the default export from the file
+*/
+
+// ES6 : Create a JS Promise
+
+
+const myPromise = new Promise((resolve, reject) => {
+
+});
+
+// ES6 : Complete a Promise with resolve and reject
+
+const myPromise = new Promise((resolve, reject) => {
+  if(condition here) {
+    resolve("Promise was fulfilled");
+  } else {
+    reject("Promise was rejected");
+  }
+});
+
+
+
+// ES6 : Handle a Fulfilled Promise with then
+
+myPromise.then(result => {
+  // do something with the result.
+});
+
+//result comes from the argument given to the resolve method
+
+
+
+// ES6 : Handle a Rejected Promise with catch
+
+myPromise.catch(error => {
+  // do something with the error.
+});
+
+//error is the argument passed in to the reject method
+
+
 
