@@ -344,13 +344,13 @@ Basically, you get the default export from the file
 
 
 const myPromise = new Promise((resolve, reject) => {
-
+  //
 });
 
 // ES6 : Complete a Promise with resolve and reject
 
-const myPromise = new Promise((resolve, reject) => {
-  if(condition here) {
+const myPromise2 = new Promise((resolve, reject) => {
+  if(true) { //condition here
     resolve("Promise was fulfilled");
   } else {
     reject("Promise was rejected");
